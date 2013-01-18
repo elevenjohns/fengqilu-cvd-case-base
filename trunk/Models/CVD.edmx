@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FengQiLuModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="FengQiLuModelStoreContainer">
+    <EntitySet Name="CVD" EntityType="FengQiLuModel.Store.CVD" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="CVD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Instance_ID" Type="int" Nullable="true" />
+    <Property Name="Patient_ID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Patient_Name" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="Patient_Gender" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="Patient_Birthday" Type="datetime" Nullable="true" />
+    <Property Name="ExactAge" Type="int" Nullable="true" />
+    <Property Name="Patient_Tel" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Admission" Type="datetime" Nullable="true" />
+    <Property Name="Discharge" Type="datetime" Nullable="true" />
+    <Property Name="Diagnosis" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Complications_Diabetes" Type="bit" Nullable="true" />
+    <Property Name="Complications_Hypertension" Type="bit" Nullable="true" />
+    <Property Name="Complications_Hyperlipidemia" Type="bit" Nullable="true" />
+    <Property Name="Complications_CI" Type="bit" Nullable="true" />
+    <Property Name="Complications_CRI" Type="bit" Nullable="true" />
+    <Property Name="Complications_PAD" Type="bit" Nullable="true" />
+    <Property Name="StrokeExperience" Type="bit" Nullable="true" />
+    <Property Name="OMI" Type="bit" Nullable="true" />
+    <Property Name="FamilyHistoryFlag" Type="bit" Nullable="true" />
+    <Property Name="Scenario_Smooking" Type="bit" Nullable="true" />
+    <Property Name="Scenario_Anthropometrics_BodyHeight" Type="float" Nullable="true" />
+    <Property Name="Scenario_Anthropometrics_BodyWeight" Type="float" Nullable="true" />
+    <Property Name="Scenario_Anthropometrics_BMI" Type="float" Nullable="true" />
+    <Property Name="Scenario_PhysiologicalParameters_HR" Type="float" Nullable="true" />
+    <Property Name="Scenario_PhysiologicalParameters_BpSys" Type="float" Nullable="true" />
+    <Property Name="Scenario_PhysiologicalParameters_BpDia" Type="float" Nullable="true" />
+    <Property Name="Medication_Aspirin" Type="bit" Nullable="true" />
+    <Property Name="Medication_Clopidogrel" Type="bit" Nullable="true" />
+    <Property Name="Medication_TirofibanHydrochloride" Type="bit" Nullable="true" />
+    <Property Name="Medication_Statins" Type="bit" Nullable="true" />
+    <Property Name="Medication_Prolol" Type="bit" Nullable="true" />
+    <Property Name="Medication_ACEIARB" Type="bit" Nullable="true" />
+    <Property Name="PCI_SurgeryDay" Type="datetime" Nullable="true" />
+    <Property Name="PCI_Emergency_PCI" Type="bit" Nullable="true" />
+    <Property Name="PCI_CA_LAD_StenosisLevel" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_LAD_StenosisSegmentsRaw" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_DIAG_StenosisLevel" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_LCX_StenosisLevel" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_LCX_StenosisSegmentsRaw" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_OM_StenosisLevel" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_RCA_StenosisLevel" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_RCA_StenosisSegmentsRaw" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_LM_StenosisLevel" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_RenalArtery_StenosisLevel" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_LAD_PCI" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_DIAG_PCI" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_LCX_PCI" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_RCA_PCI" Type="int" Nullable="true" />
+    <Property Name="PCI_CA_LM_PCI" Type="int" Nullable="true" />
+    <Property Name="Scenario_Test_TC" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_TG" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_LDL" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_HDL" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_APOA1" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_APOB" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_a" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_CRE" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_BUN" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_FBG" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_CK" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_CK_MB" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_TNT" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_HCY" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_CYC" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_UA" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_BNP" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_HGB" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_WBC" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_Neutrophil" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_D_Dimer" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_CRP" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_IL_6" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_CRE_48h" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_BUN_48h" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_EF" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_LVDs" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_LVDd" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_IVS" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_LVPW" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_LAD" Type="float" Nullable="true" />
+    <Property Name="Scenario_CarotidUS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Scenario_RenalArteryUS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FollowUp_Death" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FollowUp_MI" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FollowUp_Revascularization" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FollowUp_HF" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FollowUp_Readmission" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FollowUp_FollowUpLabSheet" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FollowUp_CardiacEvent" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Scenario_Test_AST" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_LDH" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_LD1" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_Mg" Type="float" Nullable="true" />
+    <Property Name="Scenario_Test_PPBS" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_AOD" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_LVEF" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_IVSd" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_LVM" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_LVMI" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_RVDd" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_FS" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_RWT" Type="float" Nullable="true" />
+    <Property Name="Scenario_Echo_PWDd" Type="float" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FengQiLuModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FengQiLuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CVD" EntityType="FengQiLuModel.CVD" />
+        </EntityContainer>
+        <EntityType Name="CVD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Instance_ID" Type="Int32" Nullable="true" />
+          <Property Name="Patient_ID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="Patient_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="Patient_Gender" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Patient_Birthday" Type="DateTime" />
+          <Property Name="ExactAge" Type="Int32" />
+          <Property Name="Patient_Tel" Type="String" Unicode="true" Nullable="true" />
+          <Property Name="Admission" Type="DateTime" Nullable="true" />
+          <Property Name="Discharge" Type="DateTime" Nullable="true" />
+          <Property Name="Diagnosis" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="false" />
+          <Property Name="Complications_Diabetes" Type="Boolean" Nullable="true" />
+          <Property Name="Complications_Hypertension" Type="Boolean" Nullable="true" />
+          <Property Name="Complications_Hyperlipidemia" Type="Boolean" Nullable="true" />
+          <Property Name="Complications_CI" Type="Boolean" Nullable="true" />
+          <Property Name="Complications_CRI" Type="Boolean" Nullable="true" />
+          <Property Name="Complications_PAD" Type="Boolean" Nullable="true" />
+          <Property Name="StrokeExperience" Type="Boolean" Nullable="true" />
+          <Property Name="OMI" Type="Boolean" Nullable="true" />
+          <Property Name="FamilyHistoryFlag" Type="Boolean" Nullable="true" />
+          <Property Name="Scenario_Smooking" Type="Boolean" Nullable="true" />
+          <Property Name="Scenario_Anthropometrics_BodyHeight" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Anthropometrics_BodyWeight" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Anthropometrics_BMI" Type="Double" Nullable="true" />
+          <Property Name="Scenario_PhysiologicalParameters_HR" Type="Double" Nullable="true" />
+          <Property Name="Scenario_PhysiologicalParameters_BpSys" Type="Double" Nullable="true" />
+          <Property Name="Scenario_PhysiologicalParameters_BpDia" Type="Double" Nullable="true" />
+          <Property Name="Medication_Aspirin" Type="Boolean" Nullable="true" />
+          <Property Name="Medication_Clopidogrel" Type="Boolean" Nullable="true" />
+          <Property Name="Medication_TirofibanHydrochloride" Type="Boolean" Nullable="true" />
+          <Property Name="Medication_Statins" Type="Boolean" Nullable="true" />
+          <Property Name="Medication_Prolol" Type="Boolean" Nullable="true" />
+          <Property Name="Medication_ACEIARB" Type="Boolean" Nullable="true" />
+          <Property Name="PCI_SurgeryDay" Type="DateTime" Nullable="true" />
+          <Property Name="PCI_Emergency_PCI" Type="Boolean" Nullable="true" />
+          <Property Name="PCI_CA_LAD_StenosisLevel" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_LAD_StenosisSegmentsRaw" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_DIAG_StenosisLevel" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_LCX_StenosisLevel" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_LCX_StenosisSegmentsRaw" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_OM_StenosisLevel" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_RCA_StenosisLevel" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_RCA_StenosisSegmentsRaw" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_LM_StenosisLevel" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_RenalArtery_StenosisLevel" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_LAD_PCI" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_DIAG_PCI" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_LCX_PCI" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_RCA_PCI" Type="Int32" Nullable="true" />
+          <Property Name="PCI_CA_LM_PCI" Type="Int32" Nullable="true" />
+          <Property Name="Scenario_Test_TC" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_TG" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_LDL" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_HDL" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_APOA1" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_APOB" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_a" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_CRE" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_BUN" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_FBG" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_CK" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_CK_MB" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_TNT" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_HCY" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_CYC" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_UA" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_BNP" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_HGB" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_WBC" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_Neutrophil" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_D_Dimer" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_CRP" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_IL_6" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_CRE_48h" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Test_BUN_48h" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Echo_EF" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Echo_LVDs" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Echo_LVDd" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Echo_IVS" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Echo_LVPW" Type="Double" Nullable="true" />
+          <Property Name="Scenario_Echo_LAD" Type="Double" Nullable="true" />
+          <Property Name="Scenario_CarotidUS" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="Scenario_RenalArteryUS" Type="String" Nullable="true" />
+          <Property Name="FollowUp_Death" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="FollowUp_MI" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="FollowUp_Revascularization" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="FollowUp_HF" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="FollowUp_Readmission" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="FollowUp_FollowUpLabSheet" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="FollowUp_CardiacEvent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Test_AST" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Test_LDH" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Test_LD1" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Test_Mg" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Test_PPBS" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_AOD" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_LVEF" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_IVSd" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_LVM" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_LVMI" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_RVDd" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_FS" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_RWT" Nullable="true" />
+          <Property Type="Double" Name="Scenario_Echo_PWDd" Nullable="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FengQiLuModelStoreContainer" CdmEntityContainer="FengQiLuEntities">
+    <EntitySetMapping Name="CVD">
+      <EntityTypeMapping TypeName="IsTypeOf(FengQiLuModel.CVD)">
+        <MappingFragment StoreEntitySet="CVD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Instance_ID" ColumnName="Instance_ID" />
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="Patient_Name" ColumnName="Patient_Name" />
+          <ScalarProperty Name="Patient_Gender" ColumnName="Patient_Gender" />
+          <ScalarProperty Name="Patient_Birthday" ColumnName="Patient_Birthday" />
+          <ScalarProperty Name="ExactAge" ColumnName="ExactAge" />
+          <ScalarProperty Name="Patient_Tel" ColumnName="Patient_Tel" />
+          <ScalarProperty Name="Admission" ColumnName="Admission" />
+          <ScalarProperty Name="Discharge" ColumnName="Discharge" />
+          <ScalarProperty Name="Diagnosis" ColumnName="Diagnosis" />
+          <ScalarProperty Name="Complications_Diabetes" ColumnName="Complications_Diabetes" />
+          <ScalarProperty Name="Complications_Hypertension" ColumnName="Complications_Hypertension" />
+          <ScalarProperty Name="Complications_Hyperlipidemia" ColumnName="Complications_Hyperlipidemia" />
+          <ScalarProperty Name="Complications_CI" ColumnName="Complications_CI" />
+          <ScalarProperty Name="Complications_CRI" ColumnName="Complications_CRI" />
+          <ScalarProperty Name="Complications_PAD" ColumnName="Complications_PAD" />
+          <ScalarProperty Name="StrokeExperience" ColumnName="StrokeExperience" />
+          <ScalarProperty Name="OMI" ColumnName="OMI" />
+          <ScalarProperty Name="FamilyHistoryFlag" ColumnName="FamilyHistoryFlag" />
+          <ScalarProperty Name="Scenario_Smooking" ColumnName="Scenario_Smooking" />
+          <ScalarProperty Name="Scenario_Anthropometrics_BodyHeight" ColumnName="Scenario_Anthropometrics_BodyHeight" />
+          <ScalarProperty Name="Scenario_Anthropometrics_BodyWeight" ColumnName="Scenario_Anthropometrics_BodyWeight" />
+          <ScalarProperty Name="Scenario_Anthropometrics_BMI" ColumnName="Scenario_Anthropometrics_BMI" />
+          <ScalarProperty Name="Scenario_PhysiologicalParameters_HR" ColumnName="Scenario_PhysiologicalParameters_HR" />
+          <ScalarProperty Name="Scenario_PhysiologicalParameters_BpSys" ColumnName="Scenario_PhysiologicalParameters_BpSys" />
+          <ScalarProperty Name="Scenario_PhysiologicalParameters_BpDia" ColumnName="Scenario_PhysiologicalParameters_BpDia" />
+          <ScalarProperty Name="Medication_Aspirin" ColumnName="Medication_Aspirin" />
+          <ScalarProperty Name="Medication_Clopidogrel" ColumnName="Medication_Clopidogrel" />
+          <ScalarProperty Name="Medication_TirofibanHydrochloride" ColumnName="Medication_TirofibanHydrochloride" />
+          <ScalarProperty Name="Medication_Statins" ColumnName="Medication_Statins" />
+          <ScalarProperty Name="Medication_Prolol" ColumnName="Medication_Prolol" />
+          <ScalarProperty Name="Medication_ACEIARB" ColumnName="Medication_ACEIARB" />
+          <ScalarProperty Name="PCI_SurgeryDay" ColumnName="PCI_SurgeryDay" />
+          <ScalarProperty Name="PCI_Emergency_PCI" ColumnName="PCI_Emergency_PCI" />
+          <ScalarProperty Name="PCI_CA_LAD_StenosisLevel" ColumnName="PCI_CA_LAD_StenosisLevel" />
+          <ScalarProperty Name="PCI_CA_LAD_StenosisSegmentsRaw" ColumnName="PCI_CA_LAD_StenosisSegmentsRaw" />
+          <ScalarProperty Name="PCI_CA_DIAG_StenosisLevel" ColumnName="PCI_CA_DIAG_StenosisLevel" />
+          <ScalarProperty Name="PCI_CA_LCX_StenosisLevel" ColumnName="PCI_CA_LCX_StenosisLevel" />
+          <ScalarProperty Name="PCI_CA_LCX_StenosisSegmentsRaw" ColumnName="PCI_CA_LCX_StenosisSegmentsRaw" />
+          <ScalarProperty Name="PCI_CA_OM_StenosisLevel" ColumnName="PCI_CA_OM_StenosisLevel" />
+          <ScalarProperty Name="PCI_CA_RCA_StenosisLevel" ColumnName="PCI_CA_RCA_StenosisLevel" />
+          <ScalarProperty Name="PCI_CA_RCA_StenosisSegmentsRaw" ColumnName="PCI_CA_RCA_StenosisSegmentsRaw" />
+          <ScalarProperty Name="PCI_CA_LM_StenosisLevel" ColumnName="PCI_CA_LM_StenosisLevel" />
+          <ScalarProperty Name="PCI_CA_RenalArtery_StenosisLevel" ColumnName="PCI_CA_RenalArtery_StenosisLevel" />
+          <ScalarProperty Name="PCI_CA_LAD_PCI" ColumnName="PCI_CA_LAD_PCI" />
+          <ScalarProperty Name="PCI_CA_DIAG_PCI" ColumnName="PCI_CA_DIAG_PCI" />
+          <ScalarProperty Name="PCI_CA_LCX_PCI" ColumnName="PCI_CA_LCX_PCI" />
+          <ScalarProperty Name="PCI_CA_RCA_PCI" ColumnName="PCI_CA_RCA_PCI" />
+          <ScalarProperty Name="PCI_CA_LM_PCI" ColumnName="PCI_CA_LM_PCI" />
+          <ScalarProperty Name="Scenario_Test_TC" ColumnName="Scenario_Test_TC" />
+          <ScalarProperty Name="Scenario_Test_TG" ColumnName="Scenario_Test_TG" />
+          <ScalarProperty Name="Scenario_Test_LDL" ColumnName="Scenario_Test_LDL" />
+          <ScalarProperty Name="Scenario_Test_HDL" ColumnName="Scenario_Test_HDL" />
+          <ScalarProperty Name="Scenario_Test_APOA1" ColumnName="Scenario_Test_APOA1" />
+          <ScalarProperty Name="Scenario_Test_APOB" ColumnName="Scenario_Test_APOB" />
+          <ScalarProperty Name="Scenario_Test_a" ColumnName="Scenario_Test_a" />
+          <ScalarProperty Name="Scenario_Test_CRE" ColumnName="Scenario_Test_CRE" />
+          <ScalarProperty Name="Scenario_Test_BUN" ColumnName="Scenario_Test_BUN" />
+          <ScalarProperty Name="Scenario_Test_FBG" ColumnName="Scenario_Test_FBG" />
+          <ScalarProperty Name="Scenario_Test_CK" ColumnName="Scenario_Test_CK" />
+          <ScalarProperty Name="Scenario_Test_CK_MB" ColumnName="Scenario_Test_CK_MB" />
+          <ScalarProperty Name="Scenario_Test_TNT" ColumnName="Scenario_Test_TNT" />
+          <ScalarProperty Name="Scenario_Test_HCY" ColumnName="Scenario_Test_HCY" />
+          <ScalarProperty Name="Scenario_Test_CYC" ColumnName="Scenario_Test_CYC" />
+          <ScalarProperty Name="Scenario_Test_UA" ColumnName="Scenario_Test_UA" />
+          <ScalarProperty Name="Scenario_Test_BNP" ColumnName="Scenario_Test_BNP" />
+          <ScalarProperty Name="Scenario_Test_HGB" ColumnName="Scenario_Test_HGB" />
+          <ScalarProperty Name="Scenario_Test_WBC" ColumnName="Scenario_Test_WBC" />
+          <ScalarProperty Name="Scenario_Test_Neutrophil" ColumnName="Scenario_Test_Neutrophil" />
+          <ScalarProperty Name="Scenario_Test_D_Dimer" ColumnName="Scenario_Test_D_Dimer" />
+          <ScalarProperty Name="Scenario_Test_CRP" ColumnName="Scenario_Test_CRP" />
+          <ScalarProperty Name="Scenario_Test_IL_6" ColumnName="Scenario_Test_IL_6" />
+          <ScalarProperty Name="Scenario_Test_CRE_48h" ColumnName="Scenario_Test_CRE_48h" />
+          <ScalarProperty Name="Scenario_Test_BUN_48h" ColumnName="Scenario_Test_BUN_48h" />
+          <ScalarProperty Name="Scenario_Echo_EF" ColumnName="Scenario_Echo_EF" />
+          <ScalarProperty Name="Scenario_Echo_LVDs" ColumnName="Scenario_Echo_LVDs" />
+          <ScalarProperty Name="Scenario_Echo_LVDd" ColumnName="Scenario_Echo_LVDd" />
+          <ScalarProperty Name="Scenario_Echo_IVS" ColumnName="Scenario_Echo_IVS" />
+          <ScalarProperty Name="Scenario_Echo_LVPW" ColumnName="Scenario_Echo_LVPW" />
+          <ScalarProperty Name="Scenario_Echo_LAD" ColumnName="Scenario_Echo_LAD" />
+          <ScalarProperty Name="Scenario_CarotidUS" ColumnName="Scenario_CarotidUS" />
+          <ScalarProperty Name="Scenario_RenalArteryUS" ColumnName="Scenario_RenalArteryUS" />
+          <ScalarProperty Name="FollowUp_Death" ColumnName="FollowUp_Death" />
+          <ScalarProperty Name="FollowUp_MI" ColumnName="FollowUp_MI" />
+          <ScalarProperty Name="FollowUp_Revascularization" ColumnName="FollowUp_Revascularization" />
+          <ScalarProperty Name="FollowUp_HF" ColumnName="FollowUp_HF" />
+          <ScalarProperty Name="FollowUp_Readmission" ColumnName="FollowUp_Readmission" />
+          <ScalarProperty Name="FollowUp_FollowUpLabSheet" ColumnName="FollowUp_FollowUpLabSheet" />
+          <ScalarProperty Name="FollowUp_CardiacEvent" ColumnName="FollowUp_CardiacEvent" />
+          <ScalarProperty Name="Scenario_Test_AST" ColumnName="Scenario_Test_AST" />
+          <ScalarProperty Name="Scenario_Test_LDH" ColumnName="Scenario_Test_LDH" />
+          <ScalarProperty Name="Scenario_Test_LD1" ColumnName="Scenario_Test_LD1" />
+          <ScalarProperty Name="Scenario_Test_Mg" ColumnName="Scenario_Test_Mg" />
+          <ScalarProperty Name="Scenario_Test_PPBS" ColumnName="Scenario_Test_PPBS" />
+          <ScalarProperty Name="Scenario_Echo_AOD" ColumnName="Scenario_Echo_AOD" />
+          <ScalarProperty Name="Scenario_Echo_LVEF" ColumnName="Scenario_Echo_LVEF" />
+          <ScalarProperty Name="Scenario_Echo_IVSd" ColumnName="Scenario_Echo_IVSd" />
+          <ScalarProperty Name="Scenario_Echo_LVM" ColumnName="Scenario_Echo_LVM" />
+          <ScalarProperty Name="Scenario_Echo_LVMI" ColumnName="Scenario_Echo_LVMI" />
+          <ScalarProperty Name="Scenario_Echo_RVDd" ColumnName="Scenario_Echo_RVDd" />
+          <ScalarProperty Name="Scenario_Echo_FS" ColumnName="Scenario_Echo_FS" />
+          <ScalarProperty Name="Scenario_Echo_RWT" ColumnName="Scenario_Echo_RWT" />
+          <ScalarProperty Name="Scenario_Echo_PWDd" ColumnName="Scenario_Echo_PWDd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CVD" ZoomLevel="82">
+        <EntityTypeShape EntityType="FengQiLuModel.CVD" Width="3.25" PointX="0.75" PointY="0.75" Height="18.027039388020835" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

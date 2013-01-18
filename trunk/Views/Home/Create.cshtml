@@ -1,0 +1,895 @@
+﻿@model FengQiLu.Models.CVD
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui-timepicker-addon.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("input.datetime").datetimepicker();
+        $("input.date").datepicker();
+    });
+</script>
+
+@*<script type="text/javascript">
+    $(document).ready(function () {
+        $("#birthday").datepicker();
+        $("#hide").click(function () {
+            $("div#tabs").hide(1000);
+        });
+        $("#show").click(function () {
+            $("div#tabs").show("1000");
+        });
+        $("#toggle").click(function () {
+            $("div#tabs").toggle()
+        });
+        $("#slide").click(function () {
+            $("div#tabs").slideUp("slow");
+            $("div#tabs").slideDown("slow");
+            $("div#tabs").slideToggle(2000);
+        });
+        $("#css").click(function () {
+            $("p").css({ "background-color": "yellow" });
+        });
+    });
+</script>*@
+
+@if (string.IsNullOrEmpty(ViewBag.Message) == false)
+{ 
+<p>@ViewBag.Message</p>
+}
+
+@*<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="toggle">Toggle</button>
+<button id="slide">Slide</button>
+<button id="css">css</button>*@
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+       
+    <div id="tabs">    
+    <ul>
+        <li><a href="#fragment-0"><span>基本信息</span></a></li>
+        <li><a href="#fragment-1"><span>病史</span></a></li>  
+        <li><a href="#fragment-2"><span>用药</span></a></li>
+        <li><a href="#fragment-3"><span>造影手术</span></a></li>
+        <li><a href="#fragment-4"><span>检验</span></a></li> 
+        <li><a href="#fragment-5"><span>超声</span></a></li>
+        <li><a href="#fragment-6"><span>随访</span></a></li>
+    </ul>
+
+    <div id="fragment-0">    
+        <div class="editor-label">
+            住院号
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Instance_ID)
+            @Html.ValidationMessageFor(model => model.Instance_ID)
+        </div>
+
+        <div class="editor-label">
+            病人号
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Patient_ID)
+            @Html.ValidationMessageFor(model => model.Patient_ID)
+        </div>
+
+        <div class="editor-label">
+            姓名
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Patient_Name)
+            @Html.ValidationMessageFor(model => model.Patient_Name)
+        </div>
+
+        <div class="editor-label">
+            性别
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Patient_Gender)
+            @Html.ValidationMessageFor(model => model.Patient_Gender)
+        </div>
+
+        <div class="editor-label">
+            出生年月(按“月/日/年”格式录入，如12/29/2012)
+        </div>
+        <div class="editor-field">
+            <input type="text" name="Patient_Birthday" id="Patient_Birthday" value="" class="date"/>
+            @Html.ValidationMessageFor(model => model.Patient_Birthday)
+        </div>
+
+        <div class="editor-label">
+            实足年龄
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ExactAge)
+            @Html.ValidationMessageFor(model => model.ExactAge)
+        </div>
+
+        <div class="editor-label">
+            入院时间(按“月/日/年 时:分”格式录入，如12/29/2012 12:30)
+        </div>
+        <div class="editor-field">
+            <input type="text" name="Admission" id="Admission" value="" class="datetime"/>
+            @Html.ValidationMessageFor(model => model.Admission)
+        </div>
+
+        <div class="editor-label">
+            出院时间(按“月/日/年 时:分”格式录入，如12/29/2012 12:30)
+        </div>
+        <div class="editor-field">
+            <input type="text" name="Discharge" id="Discharge" value="" class="datetime"/>
+            @Html.ValidationMessageFor(model => model.Discharge)
+        </div>
+
+        <div class="editor-label">
+            诊断
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Diagnosis)
+            @Html.ValidationMessageFor(model => model.Diagnosis)
+        </div>
+
+
+    </div>
+    
+    <div id="fragment-1">    
+        <div class="editor-label">
+            糖尿病
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.Complications_Diabetes)
+            @Html.ValidationMessageFor(model => model.Complications_Diabetes)            
+        </div>
+
+        <div class="editor-label">
+            高血压
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.Complications_Hypertension)
+            @Html.ValidationMessageFor(model => model.Complications_Hypertension)            
+        </div>
+
+        <div class="editor-label">
+            高脂血
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.Complications_Hyperlipidemia)
+            @Html.ValidationMessageFor(model => model.Complications_Hyperlipidemia)            
+        </div>
+
+        <div class="editor-label">
+            心功能不全
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.Complications_CI)
+            @Html.ValidationMessageFor(model => model.Complications_CI)            
+        </div>
+
+        <div class="editor-label">
+            慢性肾功能不全
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.Complications_CRI)
+            @Html.ValidationMessageFor(model => model.Complications_CRI)         </div>
+        
+        <div class="editor-label">
+            外周血管病变
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.Complications_PAD)
+            @Html.ValidationMessageFor(model => model.Complications_PAD)            
+        </div>
+
+        <div class="editor-label">
+            脑卒中史
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.StrokeExperience)
+            @Html.ValidationMessageFor(model => model.StrokeExperience)            
+        </div>
+
+        <div class="editor-label">
+            陈旧性心梗
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.OMI)
+            @Html.ValidationMessageFor(model => model.OMI)            
+        </div>
+
+        <div class="editor-label">
+            家族史
+        </div>
+        <div class="editor-field">            
+            @Html.EditorFor(model => model.FamilyHistoryFlag)
+            @Html.ValidationMessageFor(model => model.FamilyHistoryFlag)            
+        </div>
+
+        <div class="editor-label">
+            吸烟史
+        </div>
+        <div class="editor-label">            
+            @Html.EditorFor(model => model.Scenario_Smooking)
+            @Html.ValidationMessageFor(model => model.Scenario_Smooking)
+        </div>
+    </div>
+    
+    <div id="fragment-2">
+        <div class="editor-label">
+            阿司匹林
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Medication_Aspirin)
+            @Html.ValidationMessageFor(model => model.Medication_Aspirin)
+        </div>
+
+        <div class="editor-label">
+            氯吡格雷
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Medication_Clopidogrel)
+            @Html.ValidationMessageFor(model => model.Medication_Clopidogrel)
+        </div>
+
+        <div class="editor-label">
+            钙离子拮抗剂（洛尔类）
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Medication_Prolol)
+            @Html.ValidationMessageFor(model => model.Medication_Prolol)
+        </div>
+
+        <div class="editor-label">
+            他汀类
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Medication_Statins)
+            @Html.ValidationMessageFor(model => model.Medication_Statins)
+        </div>
+
+        <div class="editor-label">
+            血小板GP IIb/IIIa受体拮抗剂(盐酸替罗非班)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Medication_TirofibanHydrochloride)
+            @Html.ValidationMessageFor(model => model.Medication_TirofibanHydrochloride)
+        </div>
+    </div>  
+
+    <div id="fragment-3">
+        <div class="editor-label">
+            手术日期
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PCI_SurgeryDay)
+            @Html.ValidationMessageFor(model => model.PCI_SurgeryDay)
+        </div>
+
+        <div class="editor-label">
+            是否急诊PCI
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PCI_Emergency_PCI)
+            @Html.ValidationMessageFor(model => model.PCI_Emergency_PCI)
+        </div>
+
+        <div id="pci-tabs">    
+            <ul>
+                <li><a href="#fragment-LAD"><span>左前降支LAD</span></a></li>
+                <li><a href="#fragment-DIAG"><span>对角支DIAG</span></a></li>  
+                <li><a href="#fragment-LCX"><span>左回旋支LCX</span></a></li>
+                <li><a href="#fragment-OM"><span>钝缘支OM</span></a></li>
+                <li><a href="#fragment-RCA"><span>右冠脉RCA</span></a></li>
+                <li><a href="#fragment-LM"><span>左主冠脉LM</span></a></li>
+                <li><a href="#fragment-RenalArtery"><span>肾动脉</span></a></li>
+            </ul>
+            <div id="fragment-LAD">
+                <div class="editor-label">
+                    狭窄程度(1:50-74%,2：75-89%,3:90-99%,4:100%)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_LAD_StenosisLevel)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_LAD_StenosisLevel)
+                </div>
+
+                <div class="editor-label">
+                    狭窄部位（1:近段，2：中段，3：远段）
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_LAD_StenosisSegmentsRaw)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_LAD_StenosisSegmentsRaw)
+                </div>
+
+                <div class="editor-label">
+                    治疗部位数目
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_LAD_PCI)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_LAD_PCI)
+                </div>
+            </div>
+            <div id="fragment-DIAG">
+                <div class="editor-label">
+                    狭窄程度(1:50-74%,2：75-89%,3:90-99%,4:100%)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_DIAG_StenosisLevel)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_DIAG_StenosisLevel)
+                </div>                
+
+                <div class="editor-label">
+                    治疗部位数目
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_DIAG_PCI)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_DIAG_PCI)
+                </div>
+            </div>
+            <div id="fragment-LCX">
+                <div class="editor-label">
+                    狭窄程度(1:50-74%,2：75-89%,3:90-99%,4:100%)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_LCX_StenosisLevel)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_LCX_StenosisLevel)
+                </div>
+
+                <div class="editor-label">
+                    狭窄部位（1:近段，2：中段，3：远段）
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_LCX_StenosisSegmentsRaw)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_LCX_StenosisSegmentsRaw)
+                </div>
+
+                <div class="editor-label">
+                    治疗部位数目
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_LCX_PCI)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_LCX_PCI)
+                </div>
+            </div>
+            <div id="fragment-OM">
+                <div class="editor-label">
+                    狭窄程度(1:50-74%,2：75-89%,3:90-99%,4:100%)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_OM_StenosisLevel)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_OM_StenosisLevel)
+                </div>
+            </div>
+            <div id="fragment-RCA">
+                <div class="editor-label">
+                    狭窄程度(1:50-74%,2：75-89%,3:90-99%,4:100%)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_RCA_StenosisLevel)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_RCA_StenosisLevel)
+                </div>
+
+                <div class="editor-label">
+                    狭窄部位（1:近段，2：中段，3：远段）
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_RCA_StenosisSegmentsRaw)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_RCA_StenosisSegmentsRaw)
+                </div>
+
+                <div class="editor-label">
+                    治疗部位数目
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_RCA_PCI)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_RCA_PCI)
+                </div>
+            </div>
+            <div id="fragment-LM">
+                <div class="editor-label">
+                    狭窄程度(1:50-74%,2：75-89%,3:90-99%,4:100%)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_LM_StenosisLevel)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_LM_StenosisLevel)
+                </div>                
+
+                <div class="editor-label">
+                    治疗部位数目
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_LM_PCI)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_LM_PCI)
+                </div>
+            </div>
+            <div id="fragment-RenalArtery">
+                <div class="editor-label">
+                    狭窄程度(1:50-74%,2：75-89%,3:90-99%,4:100%)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.PCI_CA_RenalArtery_StenosisLevel)
+                    @Html.ValidationMessageFor(model => model.PCI_CA_RenalArtery_StenosisLevel)
+                </div>
+            </div>
+         </div>
+    </div>
+   
+    <div id="fragment-4">  
+       <div id="test-tabs">    
+            <ul>
+                <li><a href="#fragment-MyocardialInjury"><span>心肌损伤/心肌梗死标记物</span></a></li>
+                <li><a href="#fragment-Lipid"><span>血脂</span></a></li>  
+                <li><a href="#fragment-Renal"><span>肾功能</span></a></li>
+                <li><a href="#fragment-BloodSugar"><span>血糖</span></a></li>
+                <li><a href="#fragment-BloodRoutine"><span>血常规</span></a></li>
+                <li><a href="#fragment-CVD"><span>心血管疾病</span></a></li>
+                <li><a href="#fragment-48h"><span>术后48h</span></a></li>
+            </ul>
+            <div id="fragment-MyocardialInjury">
+                <div class="editor-label">
+                    AST
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_AST)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_AST)
+                </div>
+
+                <div class="editor-label">
+                    CK
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_CK)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_CK)            
+                </div>
+
+                <div class="editor-label">
+                    CK-MB
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_CK_MB)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_CK_MB)            
+                </div>
+
+                <div class="editor-label">
+                    LDH
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_LDH)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_LDH)
+                </div>
+
+                <div class="editor-label">
+                    LD1
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_LD1)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_LD1)
+                </div>
+
+                <div class="editor-label">
+                    TNT
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_TNT)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_TNT)
+                </div>
+            </div>
+            <div id="fragment-Lipid">
+                <div class="editor-label">
+                    TC
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_TC)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_TC)
+                </div>
+
+                <div class="editor-label">
+                    TG
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_TG)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_TG)
+                </div>
+
+                <div class="editor-label">
+                    LDL
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_LDL)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_LDL)
+                </div>
+
+                <div class="editor-label">
+                    HDL
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_HDL)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_HDL)
+                </div>
+
+                <div class="editor-label">
+                    APOA1
+                </div>
+                <div class="editor-label">            
+                    @Html.EditorFor(model => model.Scenario_Test_APOA1)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_APOA1)
+                </div>
+
+                <div class="editor-label">
+                    APOB
+                </div>
+                <div class="editor-label">            
+                    @Html.EditorFor(model => model.Scenario_Test_APOB)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_APOB)
+                </div>
+
+                <div class="editor-label">
+                    LP(a)，脂蛋白
+                </div>
+                <div class="editor-label">            
+                    @Html.EditorFor(model => model.Scenario_Test_a)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_a)
+                </div>
+            </div>
+            <div id="fragment-Renal">
+                <div class="editor-label">
+                    CRE
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_CRE)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_CRE)
+                </div>
+
+                <div class="editor-label">
+                    BUN
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_BUN)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_BUN)
+                </div>
+
+                <div class="editor-label">
+                    UA
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_UA)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_UA)
+                </div>
+
+                <div class="editor-label">
+                    Mg
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_Mg)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_Mg)
+                </div>
+
+                <div class="editor-label">
+                    CYC
+                </div>
+                <div class="editor-label">            
+                    @Html.EditorFor(model => model.Scenario_Test_CYC)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_CYC)
+                </div>
+            </div>
+            <div id="fragment-BloodSugar">
+                <div class="editor-label">
+                    Fasting blood glucose 空腹血糖
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_FBG)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_FBG)
+                </div>
+
+                <div class="editor-label">
+                    Postprandial blood sugar 餐后血糖
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_PPBS)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_PPBS)
+                </div>
+            </div>
+            <div id="fragment-BloodRoutine">
+                <div class="editor-label">
+                    Hemoglobin 血红蛋白
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_HGB)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_HGB)
+                </div>
+
+                <div class="editor-label">
+                    白细胞
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_WBC)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_WBC)
+                </div>
+
+                <div class="editor-label">
+                    中性粒细胞
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_Neutrophil)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_Neutrophil)
+                </div>
+            </div>
+            <div id="fragment-CVD">
+                <div class="editor-label">
+                    Homocysteine 同型半胱氨酸
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_HCY)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_HCY)
+                </div>
+
+                <div class="editor-label">
+                    脑钠肽
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_BNP)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_BNP)
+                </div>
+
+                <div class="editor-label">
+                    D-Dimer
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_D_Dimer)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_D_Dimer)
+                </div>
+
+                <div class="editor-label">
+                    C-reactive protein
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_CRP)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_CRP)
+                </div>
+
+                <div class="editor-label">
+                    Interleukin-6
+                </div>
+                <div class="editor-label">            
+                    @Html.EditorFor(model => model.Scenario_Test_IL_6)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_IL_6)
+                </div>
+            </div>
+            <div id="fragment-48h">
+                <div class="editor-label">
+                    CRE
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_CRE_48h)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_CRE_48h)
+                </div>
+
+                <div class="editor-label">
+                    BUN
+                </div>
+                <div class="editor-field">            
+                    @Html.EditorFor(model => model.Scenario_Test_BUN_48h)
+                    @Html.ValidationMessageFor(model => model.Scenario_Test_BUN_48h)
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+    <div id="fragment-5">
+        <div class="editor-label">
+            升主动脉内径 aortic dimension
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_AOD)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_AOD)
+        </div>
+
+        <div class="editor-label">
+            左房内径 left atrial dimension
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_LAD)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_LAD)
+        </div>
+
+        <div class="editor-label">
+            左心室功能 LVEF
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_LVEF)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_LVEF)
+        </div>
+
+        <div class="editor-label">
+            室间隔厚度 interventricular septal dimension
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_IVS)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_IVS)
+        </div>
+
+        <div class="editor-label">
+            室间隔收缩期厚度 interventricular septal diastolic dimension
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_IVSd)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_IVSd)
+        </div>
+
+        <div class="editor-label">
+            left ventricular mass
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_LVM)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_LVM)
+        </div>
+
+        <div class="editor-label">
+            left ventricular mass index
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_LVMI)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_LVMI)
+        </div>
+
+        <div class="editor-label">
+            左室后壁厚度
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_LVPW)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_LVPW)
+        </div>
+
+        <div class="editor-label">
+            左心室收缩期内径 left ventricular dimension in systole
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_LVDs)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_LVDs)
+        </div>
+
+        <div class="editor-label">
+            左心室舒张期内径 left ventricular dimension in diastole
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_LVDd)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_LVDd)
+        </div>
+
+        <div class="editor-label">
+            right ventricular diastolic dimension
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_RVDd)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_RVDd)
+        </div>
+
+        <div class="editor-label">
+            左心室缩短分数 fractional shortening
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_FS)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_FS)
+        </div>
+
+        <div class="editor-label">
+            射血分数 ejection fraction
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_FS)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_FS)
+        </div>
+
+        <div class="editor-label">
+            relative wall thickness
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_RWT)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_RWT)
+        </div>
+
+        <div class="editor-label">
+            posterior wall diastolic dimension
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_Echo_PWDd)
+            @Html.ValidationMessageFor(model => model.Scenario_Echo_PWDd)
+        </div>
+
+        <div class="editor-label">
+            颈动脉
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_CarotidUS)
+            @Html.ValidationMessageFor(model => model.Scenario_CarotidUS)
+        </div>
+
+        <div class="editor-label">
+            肾动脉
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scenario_RenalArteryUS)
+            @Html.ValidationMessageFor(model => model.Scenario_RenalArteryUS)
+        </div>
+    </div>
+
+    <div id="fragment-6"> 
+        <div class="editor-label">
+            死亡
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FollowUp_Death)
+            @Html.ValidationMessageFor(model => model.FollowUp_Death)
+        </div>
+
+        <div class="editor-label">
+            心梗
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FollowUp_MI)
+            @Html.ValidationMessageFor(model => model.FollowUp_MI)
+        </div>
+
+        <div class="editor-label">
+            再血管化
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FollowUp_Revascularization)
+            @Html.ValidationMessageFor(model => model.FollowUp_Revascularization)
+        </div>
+
+        <div class="editor-label">
+            心衰
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FollowUp_HF)
+            @Html.ValidationMessageFor(model => model.FollowUp_HF)
+        </div>
+
+        <div class="editor-label">
+            再次入院
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FollowUp_Readmission)
+            @Html.ValidationMessageFor(model => model.FollowUp_Readmission)
+        </div>
+
+        <div class="editor-label">
+            随访化验单
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FollowUp_FollowUpLabSheet)
+            @Html.ValidationMessageFor(model => model.FollowUp_FollowUpLabSheet)
+        </div>
+
+        <div class="editor-label">
+            发生事件时间（月）
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FollowUp_CardiacEvent)
+            @Html.ValidationMessageFor(model => model.FollowUp_CardiacEvent)
+        </div>
+    </div>
+
+    <script type="text/javascript">$("#tabs").tabs();</script>
+    <script type="text/javascript">$("#pci-tabs").tabs();</script>
+    <script type="text/javascript">$("#test-tabs").tabs();</script>
+    </div> 
+    
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

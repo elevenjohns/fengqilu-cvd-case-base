@@ -1,0 +1,690 @@
+﻿<DataTable xmlns="http://schemas.datacontract.org/2004/07/System.Data">
+    <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Table1" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Table1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="Patient_ID" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Instance_ID" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Patient_Name" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Patient_Gender" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Patient_Birthday" type="xs:string" minOccurs="0"/>
+                                <xs:element name="ExactAge" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Patient_Tel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Admission" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Discharge" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Diagnosis" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Complications_Diabetes" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Complications_Hypertension" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Complications_Hyperlipidemia" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Complications_CI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Complications_CRI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Complications_PAD" type="xs:string" minOccurs="0"/>
+                                <xs:element name="StrokeExperience" type="xs:string" minOccurs="0"/>
+                                <xs:element name="OMI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="FamilyHistoryFlag" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Smooking" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Anthropometrics_BodyHeight" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Anthropometrics_BodyWeight" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Anthropometrics_BMI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_PhysiologicalParameters_HR" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_PhysiologicalParameters_BpSys" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_PhysiologicalParameters_BpDia" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Medication_Aspirin" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Medication_Clopidogrel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Medication_TirofibanHydrochloride" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Medication_Statins" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Medication_Prolol" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Medication_ACEIARB" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_SurgeryDay" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_Emergency_PCI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_LAD_StenosisLevel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_LAD_StenosisSegmentsRaw" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_DIAG_StenosisLevel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_LCX_StenosisLevel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_LCX_StenosisSegmentsRaw" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_OM_StenosisLevel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_RCA_StenosisLevel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_RCA_StenosisSegmentsRaw" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_LM_StenosisLevel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_RenalArtery_StenosisLevel" type="xs:string" minOccurs="0"/>
+                                <xs:element name="治疗" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_LAD_PCI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_DIAG_PCI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_LCX_PCI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_RCA_PCI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="PCI_CA_LM_PCI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="检验指标" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_TC" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_TG" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_LDL" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_HDL" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_APOA1" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_APOB" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_a" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_CRE" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_BUN" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_FBG" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_CK" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_CK-MB" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_TNT" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_HCY" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_CYC" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_UA" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_BNP" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_HGB" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_WBC" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_Neutrophil" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_D-Dimer" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_CRP" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_IL-6" type="xs:string" minOccurs="0"/>
+                                <xs:element name="术后48H" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_CRE_48h" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Test_BUN_48h" type="xs:string" minOccurs="0"/>
+                                <xs:element name="超声指标" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Echo_EF" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Echo_LVDs" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Echo_LVDd" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Echo_IVS" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Echo_LVPW" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_Echo_LAD" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_CarotidUS" type="xs:string" minOccurs="0"/>
+                                <xs:element name="Scenario_RenalArteryUS" type="xs:string" minOccurs="0"/>
+                                <xs:element name="随访" type="xs:string" minOccurs="0"/>
+                                <xs:element name="FollowUp_Death" type="xs:string" minOccurs="0"/>
+                                <xs:element name="FollowUp_MI" type="xs:string" minOccurs="0"/>
+                                <xs:element name="FollowUp_Revascularization" type="xs:string" minOccurs="0"/>
+                                <xs:element name="FollowUp_HF" type="xs:string" minOccurs="0"/>
+                                <xs:element name="FollowUp_Readmission" type="xs:string" minOccurs="0"/>
+                                <xs:element name="FollowUp_FollowUpLabSheet" type="xs:string" minOccurs="0"/>
+                                <xs:element name="FollowUp_CardiacEvent" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <NewDataSet xmlns="">
+            <Table1 diffgr:id="Table11" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                <Patient_ID>13607</Patient_ID>
+                <Instance_ID>784979</Instance_ID>
+                <Patient_Name>高怀芬</Patient_Name>
+                <Patient_Gender>女</Patient_Gender>
+                <Patient_Birthday>1929-5-15</Patient_Birthday>
+                <ExactAge>82</ExactAge>
+                <Patient_Tel>086 13520004546</Patient_Tel>
+                <Admission>2011-9-20 15:05</Admission>
+                <Discharge>2011-9-29 11:00</Discharge>
+                <Diagnosis>不稳定性心绞痛</Diagnosis>
+                <Complications_Diabetes>1</Complications_Diabetes>
+                <Complications_Hypertension>0</Complications_Hypertension>
+                <Complications_Hyperlipidemia>0</Complications_Hyperlipidemia>
+                <Complications_CI>1</Complications_CI>
+                <Complications_CRI>0</Complications_CRI>
+                <Complications_PAD>0</Complications_PAD>
+                <StrokeExperience>0</StrokeExperience>
+                <OMI>1</OMI>
+                <FamilyHistoryFlag>0</FamilyHistoryFlag>
+                <Scenario_Smooking>0</Scenario_Smooking>
+                <Scenario_Anthropometrics_BodyHeight>153</Scenario_Anthropometrics_BodyHeight>
+                <Scenario_Anthropometrics_BodyWeight>65</Scenario_Anthropometrics_BodyWeight>
+                <Scenario_Anthropometrics_BMI>27.8</Scenario_Anthropometrics_BMI>
+                <Scenario_PhysiologicalParameters_HR>75</Scenario_PhysiologicalParameters_HR>
+                <Scenario_PhysiologicalParameters_BpSys>140</Scenario_PhysiologicalParameters_BpSys>
+                <Scenario_PhysiologicalParameters_BpDia>57</Scenario_PhysiologicalParameters_BpDia>
+                <Medication_Aspirin>1</Medication_Aspirin>
+                <Medication_Clopidogrel>1</Medication_Clopidogrel>
+                <Medication_TirofibanHydrochloride>1</Medication_TirofibanHydrochloride>
+                <Medication_Statins>1</Medication_Statins>
+                <Medication_Prolol>1</Medication_Prolol>
+                <Medication_ACEIARB>0</Medication_ACEIARB>
+                <PCI_SurgeryDay>2011-9-26</PCI_SurgeryDay>
+                <PCI_Emergency_PCI>0</PCI_Emergency_PCI>
+                <PCI_CA_LAD_StenosisLevel>3</PCI_CA_LAD_StenosisLevel>
+                <PCI_CA_LAD_StenosisSegmentsRaw>2</PCI_CA_LAD_StenosisSegmentsRaw>
+                <PCI_CA_DIAG_StenosisLevel/>
+                <PCI_CA_LCX_StenosisLevel>0</PCI_CA_LCX_StenosisLevel>
+                <PCI_CA_LCX_StenosisSegmentsRaw>无数据</PCI_CA_LCX_StenosisSegmentsRaw>
+                <PCI_CA_OM_StenosisLevel>0</PCI_CA_OM_StenosisLevel>
+                <PCI_CA_RCA_StenosisLevel>2</PCI_CA_RCA_StenosisLevel>
+                <PCI_CA_RCA_StenosisSegmentsRaw>近中段</PCI_CA_RCA_StenosisSegmentsRaw>
+                <PCI_CA_LM_StenosisLevel>0</PCI_CA_LM_StenosisLevel>
+                <PCI_CA_RenalArtery_StenosisLevel/>
+                <治疗/>
+                <PCI_CA_LAD_PCI>0</PCI_CA_LAD_PCI>
+                <PCI_CA_DIAG_PCI>0</PCI_CA_DIAG_PCI>
+                <PCI_CA_LCX_PCI>0</PCI_CA_LCX_PCI>
+                <PCI_CA_RCA_PCI>2</PCI_CA_RCA_PCI>
+                <PCI_CA_LM_PCI>0</PCI_CA_LM_PCI>
+                <检验指标/>
+                <Scenario_Test_TC>2.65</Scenario_Test_TC>
+                <Scenario_Test_TG>1.28</Scenario_Test_TG>
+                <Scenario_Test_LDL>1.39</Scenario_Test_LDL>
+                <Scenario_Test_HDL>0.95</Scenario_Test_HDL>
+                <Scenario_Test_APOA1>1.1</Scenario_Test_APOA1>
+                <Scenario_Test_APOB>0.57</Scenario_Test_APOB>
+                <Scenario_Test_a>20.19</Scenario_Test_a>
+                <Scenario_Test_CRE>48.3</Scenario_Test_CRE>
+                <Scenario_Test_BUN>3.46</Scenario_Test_BUN>
+                <Scenario_Test_FBG>9.51</Scenario_Test_FBG>
+                <Scenario_Test_CK>24.3</Scenario_Test_CK>
+                <Scenario_Test_CK-MB>19.4</Scenario_Test_CK-MB>
+                <Scenario_Test_TNT/>
+                <Scenario_Test_HCY/>
+                <Scenario_Test_CYC>0.95</Scenario_Test_CYC>
+                <Scenario_Test_UA>284.2</Scenario_Test_UA>
+                <Scenario_Test_BNP/>
+                <Scenario_Test_HGB>127</Scenario_Test_HGB>
+                <Scenario_Test_WBC>6.01</Scenario_Test_WBC>
+                <Scenario_Test_Neutrophil>0.629</Scenario_Test_Neutrophil>
+                <Scenario_Test_D-Dimer>0.26</Scenario_Test_D-Dimer>
+                <Scenario_Test_CRP>&lt;0.308</Scenario_Test_CRP>
+                <Scenario_Test_IL-6/>
+                <术后48H/>
+                <Scenario_Test_CRE_48h/>
+                <Scenario_Test_BUN_48h/>
+                <超声指标/>
+                <Scenario_Echo_EF>60</Scenario_Echo_EF>
+                <Scenario_Echo_LVDs>22</Scenario_Echo_LVDs>
+                <Scenario_Echo_LVDd>41</Scenario_Echo_LVDd>
+                <Scenario_Echo_IVS>10.8</Scenario_Echo_IVS>
+                <Scenario_Echo_LVPW>10.6</Scenario_Echo_LVPW>
+                <Scenario_Echo_LAD>37</Scenario_Echo_LAD>
+                <Scenario_CarotidUS/>
+                <Scenario_RenalArteryUS>N/A</Scenario_RenalArteryUS>
+                <随访/>
+                <FollowUp_Death/>
+                <FollowUp_MI/>
+                <FollowUp_Revascularization/>
+                <FollowUp_HF/>
+                <FollowUp_Readmission/>
+                <FollowUp_FollowUpLabSheet/>
+                <FollowUp_CardiacEvent/>
+            </Table1>
+            <Table1 diffgr:id="Table12" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+                <Patient_ID>169854</Patient_ID>
+                <Instance_ID>306036</Instance_ID>
+                <Patient_Name>朱芳蓓</Patient_Name>
+                <Patient_Gender>女</Patient_Gender>
+                <Patient_Birthday>1930-3-9</Patient_Birthday>
+                <ExactAge>82</ExactAge>
+                <Patient_Tel>13501194159</Patient_Tel>
+                <Admission>2012-4-12 9:47</Admission>
+                <Discharge>2012-4-18 9:43</Discharge>
+                <Diagnosis>心律失常</Diagnosis>
+                <Complications_Diabetes>0</Complications_Diabetes>
+                <Complications_Hypertension>0</Complications_Hypertension>
+                <Complications_Hyperlipidemia>0</Complications_Hyperlipidemia>
+                <Complications_CI>0</Complications_CI>
+                <Complications_CRI>0</Complications_CRI>
+                <Complications_PAD>0</Complications_PAD>
+                <StrokeExperience/>
+                <OMI>0</OMI>
+                <FamilyHistoryFlag>0</FamilyHistoryFlag>
+                <Scenario_Smooking>0</Scenario_Smooking>
+                <Scenario_Anthropometrics_BodyHeight>160</Scenario_Anthropometrics_BodyHeight>
+                <Scenario_Anthropometrics_BodyWeight>75</Scenario_Anthropometrics_BodyWeight>
+                <Scenario_Anthropometrics_BMI>29.3</Scenario_Anthropometrics_BMI>
+                <Scenario_PhysiologicalParameters_HR>70</Scenario_PhysiologicalParameters_HR>
+                <Scenario_PhysiologicalParameters_BpSys>115</Scenario_PhysiologicalParameters_BpSys>
+                <Scenario_PhysiologicalParameters_BpDia>66</Scenario_PhysiologicalParameters_BpDia>
+                <Medication_Aspirin>1</Medication_Aspirin>
+                <Medication_Clopidogrel>1</Medication_Clopidogrel>
+                <Medication_TirofibanHydrochloride>0</Medication_TirofibanHydrochloride>
+                <Medication_Statins>1</Medication_Statins>
+                <Medication_Prolol>1</Medication_Prolol>
+                <Medication_ACEIARB>0</Medication_ACEIARB>
+                <PCI_SurgeryDay>2012-4-16</PCI_SurgeryDay>
+                <PCI_Emergency_PCI>0</PCI_Emergency_PCI>
+                <PCI_CA_LAD_StenosisLevel>1</PCI_CA_LAD_StenosisLevel>
+                <PCI_CA_LAD_StenosisSegmentsRaw>1</PCI_CA_LAD_StenosisSegmentsRaw>
+                <PCI_CA_DIAG_StenosisLevel>0</PCI_CA_DIAG_StenosisLevel>
+                <PCI_CA_LCX_StenosisLevel>0</PCI_CA_LCX_StenosisLevel>
+                <PCI_CA_LCX_StenosisSegmentsRaw/>
+                <PCI_CA_OM_StenosisLevel>0</PCI_CA_OM_StenosisLevel>
+                <PCI_CA_RCA_StenosisLevel>0</PCI_CA_RCA_StenosisLevel>
+                <PCI_CA_RCA_StenosisSegmentsRaw/>
+                <PCI_CA_LM_StenosisLevel>0</PCI_CA_LM_StenosisLevel>
+                <PCI_CA_RenalArtery_StenosisLevel/>
+                <治疗/>
+                <PCI_CA_LAD_PCI>0</PCI_CA_LAD_PCI>
+                <PCI_CA_DIAG_PCI>0</PCI_CA_DIAG_PCI>
+                <PCI_CA_LCX_PCI>0</PCI_CA_LCX_PCI>
+                <PCI_CA_RCA_PCI>0</PCI_CA_RCA_PCI>
+                <PCI_CA_LM_PCI/>
+                <检验指标/>
+                <Scenario_Test_TC>4.56</Scenario_Test_TC>
+                <Scenario_Test_TG>1.24</Scenario_Test_TG>
+                <Scenario_Test_LDL>2.99</Scenario_Test_LDL>
+                <Scenario_Test_HDL>0.93</Scenario_Test_HDL>
+                <Scenario_Test_APOA1>1</Scenario_Test_APOA1>
+                <Scenario_Test_APOB>0.89</Scenario_Test_APOB>
+                <Scenario_Test_a>11.41</Scenario_Test_a>
+                <Scenario_Test_CRE>107.4</Scenario_Test_CRE>
+                <Scenario_Test_BUN>8.8</Scenario_Test_BUN>
+                <Scenario_Test_FBG>4.59</Scenario_Test_FBG>
+                <Scenario_Test_CK>67.2</Scenario_Test_CK>
+                <Scenario_Test_CK-MB>11.5</Scenario_Test_CK-MB>
+                <Scenario_Test_TNT/>
+                <Scenario_Test_HCY/>
+                <Scenario_Test_CYC>1.52</Scenario_Test_CYC>
+                <Scenario_Test_UA>388.4</Scenario_Test_UA>
+                <Scenario_Test_BNP/>
+                <Scenario_Test_HGB>123</Scenario_Test_HGB>
+                <Scenario_Test_WBC>4.95</Scenario_Test_WBC>
+                <Scenario_Test_Neutrophil>0.489</Scenario_Test_Neutrophil>
+                <Scenario_Test_D-Dimer>0.63</Scenario_Test_D-Dimer>
+                <Scenario_Test_CRP/>
+                <Scenario_Test_IL-6/>
+                <术后48H/>
+                <Scenario_Test_CRE_48h/>
+                <Scenario_Test_BUN_48h/>
+                <超声指标/>
+                <Scenario_Echo_EF/>
+                <Scenario_Echo_LVDs/>
+                <Scenario_Echo_LVDd/>
+                <Scenario_Echo_IVS/>
+                <Scenario_Echo_LVPW/>
+                <Scenario_Echo_LAD/>
+                <Scenario_CarotidUS/>
+                <Scenario_RenalArteryUS/>
+                <随访/>
+                <FollowUp_Death/>
+                <FollowUp_MI/>
+                <FollowUp_Revascularization/>
+                <FollowUp_HF/>
+                <FollowUp_Readmission/>
+                <FollowUp_FollowUpLabSheet/>
+                <FollowUp_CardiacEvent/>
+            </Table1>
+            <Table1 diffgr:id="Table13" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+                <Patient_ID>43866</Patient_ID>
+                <Instance_ID>350412</Instance_ID>
+                <Patient_Name>王录敏</Patient_Name>
+                <Patient_Gender>男</Patient_Gender>
+                <Patient_Birthday>1929-9-6</Patient_Birthday>
+                <ExactAge>82</ExactAge>
+                <Patient_Tel>355156</Patient_Tel>
+                <Admission>2012-1-4 11:04</Admission>
+                <Discharge>2012-1-16 10:00</Discharge>
+                <Diagnosis>冠状动脉粥样硬化性心脏病 稳定性心绞痛 PCI术后</Diagnosis>
+                <Complications_Diabetes>0</Complications_Diabetes>
+                <Complications_Hypertension>1</Complications_Hypertension>
+                <Complications_Hyperlipidemia>0</Complications_Hyperlipidemia>
+                <Complications_CI>0</Complications_CI>
+                <Complications_CRI>1</Complications_CRI>
+                <Complications_PAD>0</Complications_PAD>
+                <StrokeExperience>0</StrokeExperience>
+                <OMI>0</OMI>
+                <FamilyHistoryFlag>0</FamilyHistoryFlag>
+                <Scenario_Smooking>0</Scenario_Smooking>
+                <Scenario_Anthropometrics_BodyHeight>177</Scenario_Anthropometrics_BodyHeight>
+                <Scenario_Anthropometrics_BodyWeight>79</Scenario_Anthropometrics_BodyWeight>
+                <Scenario_Anthropometrics_BMI>25.2</Scenario_Anthropometrics_BMI>
+                <Scenario_PhysiologicalParameters_HR>61</Scenario_PhysiologicalParameters_HR>
+                <Scenario_PhysiologicalParameters_BpSys>132</Scenario_PhysiologicalParameters_BpSys>
+                <Scenario_PhysiologicalParameters_BpDia>62</Scenario_PhysiologicalParameters_BpDia>
+                <Medication_Aspirin>1</Medication_Aspirin>
+                <Medication_Clopidogrel>1</Medication_Clopidogrel>
+                <Medication_TirofibanHydrochloride>0</Medication_TirofibanHydrochloride>
+                <Medication_Statins>1</Medication_Statins>
+                <Medication_Prolol>1</Medication_Prolol>
+                <Medication_ACEIARB>0</Medication_ACEIARB>
+                <PCI_SurgeryDay>2012-1-9</PCI_SurgeryDay>
+                <PCI_Emergency_PCI>0</PCI_Emergency_PCI>
+                <PCI_CA_LAD_StenosisLevel>1</PCI_CA_LAD_StenosisLevel>
+                <PCI_CA_LAD_StenosisSegmentsRaw>2</PCI_CA_LAD_StenosisSegmentsRaw>
+                <PCI_CA_DIAG_StenosisLevel>0</PCI_CA_DIAG_StenosisLevel>
+                <PCI_CA_LCX_StenosisLevel>0</PCI_CA_LCX_StenosisLevel>
+                <PCI_CA_LCX_StenosisSegmentsRaw/>
+                <PCI_CA_OM_StenosisLevel>0</PCI_CA_OM_StenosisLevel>
+                <PCI_CA_RCA_StenosisLevel>1</PCI_CA_RCA_StenosisLevel>
+                <PCI_CA_RCA_StenosisSegmentsRaw>远段</PCI_CA_RCA_StenosisSegmentsRaw>
+                <PCI_CA_LM_StenosisLevel>0</PCI_CA_LM_StenosisLevel>
+                <PCI_CA_RenalArtery_StenosisLevel/>
+                <治疗/>
+                <PCI_CA_LAD_PCI>0</PCI_CA_LAD_PCI>
+                <PCI_CA_DIAG_PCI>0</PCI_CA_DIAG_PCI>
+                <PCI_CA_LCX_PCI>0</PCI_CA_LCX_PCI>
+                <PCI_CA_RCA_PCI>0</PCI_CA_RCA_PCI>
+                <PCI_CA_LM_PCI>0</PCI_CA_LM_PCI>
+                <检验指标/>
+                <Scenario_Test_TC>3.65</Scenario_Test_TC>
+                <Scenario_Test_TG>0.53</Scenario_Test_TG>
+                <Scenario_Test_LDL>1.84</Scenario_Test_LDL>
+                <Scenario_Test_HDL>1.58</Scenario_Test_HDL>
+                <Scenario_Test_APOA1>1.46</Scenario_Test_APOA1>
+                <Scenario_Test_APOB>0.54</Scenario_Test_APOB>
+                <Scenario_Test_a>4.33</Scenario_Test_a>
+                <Scenario_Test_CRE>99.7</Scenario_Test_CRE>
+                <Scenario_Test_BUN>9.4</Scenario_Test_BUN>
+                <Scenario_Test_FBG>4.49</Scenario_Test_FBG>
+                <Scenario_Test_CK>80.1</Scenario_Test_CK>
+                <Scenario_Test_CK-MB>9.2</Scenario_Test_CK-MB>
+                <Scenario_Test_TNT/>
+                <Scenario_Test_HCY>8.83</Scenario_Test_HCY>
+                <Scenario_Test_CYC>1.35</Scenario_Test_CYC>
+                <Scenario_Test_UA>365.5</Scenario_Test_UA>
+                <Scenario_Test_BNP/>
+                <Scenario_Test_HGB>113</Scenario_Test_HGB>
+                <Scenario_Test_WBC>3.76</Scenario_Test_WBC>
+                <Scenario_Test_Neutrophil>0.569</Scenario_Test_Neutrophil>
+                <Scenario_Test_D-Dimer>0.28</Scenario_Test_D-Dimer>
+                <Scenario_Test_CRP>&lt;0.308</Scenario_Test_CRP>
+                <Scenario_Test_IL-6/>
+                <术后48H/>
+                <Scenario_Test_CRE_48h/>
+                <Scenario_Test_BUN_48h/>
+                <超声指标/>
+                <Scenario_Echo_EF>59</Scenario_Echo_EF>
+                <Scenario_Echo_LVDs>37</Scenario_Echo_LVDs>
+                <Scenario_Echo_LVDd>55</Scenario_Echo_LVDd>
+                <Scenario_Echo_IVS>12</Scenario_Echo_IVS>
+                <Scenario_Echo_LVPW>12</Scenario_Echo_LVPW>
+                <Scenario_Echo_LAD>37</Scenario_Echo_LAD>
+                <Scenario_CarotidUS>左侧颈总动脉可见一斑块，约2.3*9.2mm，右侧颈总动脉至颈内动脉开口处可见一斑块，约2.2*9.2mm</Scenario_CarotidUS>
+                <Scenario_RenalArteryUS/>
+                <随访/>
+                <FollowUp_Death/>
+                <FollowUp_MI/>
+                <FollowUp_Revascularization/>
+                <FollowUp_HF/>
+                <FollowUp_Readmission/>
+                <FollowUp_FollowUpLabSheet/>
+                <FollowUp_CardiacEvent/>
+            </Table1>
+            <Table1 diffgr:id="Table14" msdata:rowOrder="3" diffgr:hasChanges="inserted">
+                <Patient_ID>445091</Patient_ID>
+                <Instance_ID>59429</Instance_ID>
+                <Patient_Name>董洁身</Patient_Name>
+                <Patient_Gender>女</Patient_Gender>
+                <Patient_Birthday>1925-2-22</Patient_Birthday>
+                <ExactAge>86</ExactAge>
+                <Patient_Tel>13611261780</Patient_Tel>
+                <Admission>2011-7-17 14:45</Admission>
+                <Discharge>2011-7-25 11:00</Discharge>
+                <Diagnosis>冠心病 不稳定性心绞痛 壁冠状动脉</Diagnosis>
+                <Complications_Diabetes>0</Complications_Diabetes>
+                <Complications_Hypertension>1</Complications_Hypertension>
+                <Complications_Hyperlipidemia>0</Complications_Hyperlipidemia>
+                <Complications_CI>0</Complications_CI>
+                <Complications_CRI>0</Complications_CRI>
+                <Complications_PAD>0</Complications_PAD>
+                <StrokeExperience>0</StrokeExperience>
+                <OMI>0</OMI>
+                <FamilyHistoryFlag>0</FamilyHistoryFlag>
+                <Scenario_Smooking>0</Scenario_Smooking>
+                <Scenario_Anthropometrics_BodyHeight>163</Scenario_Anthropometrics_BodyHeight>
+                <Scenario_Anthropometrics_BodyWeight>73</Scenario_Anthropometrics_BodyWeight>
+                <Scenario_Anthropometrics_BMI>27.5</Scenario_Anthropometrics_BMI>
+                <Scenario_PhysiologicalParameters_HR>76</Scenario_PhysiologicalParameters_HR>
+                <Scenario_PhysiologicalParameters_BpSys>154</Scenario_PhysiologicalParameters_BpSys>
+                <Scenario_PhysiologicalParameters_BpDia>65</Scenario_PhysiologicalParameters_BpDia>
+                <Medication_Aspirin>1</Medication_Aspirin>
+                <Medication_Clopidogrel>1</Medication_Clopidogrel>
+                <Medication_TirofibanHydrochloride>0</Medication_TirofibanHydrochloride>
+                <Medication_Statins>1</Medication_Statins>
+                <Medication_Prolol>0</Medication_Prolol>
+                <Medication_ACEIARB>0</Medication_ACEIARB>
+                <PCI_SurgeryDay>2011-7-22</PCI_SurgeryDay>
+                <PCI_Emergency_PCI>0</PCI_Emergency_PCI>
+                <PCI_CA_LAD_StenosisLevel>0</PCI_CA_LAD_StenosisLevel>
+                <PCI_CA_LAD_StenosisSegmentsRaw/>
+                <PCI_CA_DIAG_StenosisLevel>0</PCI_CA_DIAG_StenosisLevel>
+                <PCI_CA_LCX_StenosisLevel>0</PCI_CA_LCX_StenosisLevel>
+                <PCI_CA_LCX_StenosisSegmentsRaw/>
+                <PCI_CA_OM_StenosisLevel>0</PCI_CA_OM_StenosisLevel>
+                <PCI_CA_RCA_StenosisLevel>0</PCI_CA_RCA_StenosisLevel>
+                <PCI_CA_RCA_StenosisSegmentsRaw/>
+                <PCI_CA_LM_StenosisLevel>0</PCI_CA_LM_StenosisLevel>
+                <PCI_CA_RenalArtery_StenosisLevel/>
+                <治疗/>
+                <PCI_CA_LAD_PCI>0</PCI_CA_LAD_PCI>
+                <PCI_CA_DIAG_PCI>0</PCI_CA_DIAG_PCI>
+                <PCI_CA_LCX_PCI>0</PCI_CA_LCX_PCI>
+                <PCI_CA_RCA_PCI>0</PCI_CA_RCA_PCI>
+                <PCI_CA_LM_PCI>0</PCI_CA_LM_PCI>
+                <检验指标/>
+                <Scenario_Test_TC>3.47</Scenario_Test_TC>
+                <Scenario_Test_TG>0.86</Scenario_Test_TG>
+                <Scenario_Test_LDL>1.46</Scenario_Test_LDL>
+                <Scenario_Test_HDL>1.51</Scenario_Test_HDL>
+                <Scenario_Test_APOA1/>
+                <Scenario_Test_APOB/>
+                <Scenario_Test_a/>
+                <Scenario_Test_CRE>72.9</Scenario_Test_CRE>
+                <Scenario_Test_BUN>3.31</Scenario_Test_BUN>
+                <Scenario_Test_FBG>6.03</Scenario_Test_FBG>
+                <Scenario_Test_CK>99.4</Scenario_Test_CK>
+                <Scenario_Test_CK-MB>4.39</Scenario_Test_CK-MB>
+                <Scenario_Test_TNT>0.023</Scenario_Test_TNT>
+                <Scenario_Test_HCY/>
+                <Scenario_Test_CYC/>
+                <Scenario_Test_UA>344.8</Scenario_Test_UA>
+                <Scenario_Test_BNP/>
+                <Scenario_Test_HGB>110</Scenario_Test_HGB>
+                <Scenario_Test_WBC>5.24</Scenario_Test_WBC>
+                <Scenario_Test_Neutrophil>0.698</Scenario_Test_Neutrophil>
+                <Scenario_Test_D-Dimer>0.78</Scenario_Test_D-Dimer>
+                <Scenario_Test_CRP>1.2</Scenario_Test_CRP>
+                <Scenario_Test_IL-6/>
+                <术后48H/>
+                <Scenario_Test_CRE_48h/>
+                <Scenario_Test_BUN_48h/>
+                <超声指标/>
+                <Scenario_Echo_EF>60</Scenario_Echo_EF>
+                <Scenario_Echo_LVDs>26</Scenario_Echo_LVDs>
+                <Scenario_Echo_LVDd>43</Scenario_Echo_LVDd>
+                <Scenario_Echo_IVS>10.8</Scenario_Echo_IVS>
+                <Scenario_Echo_LVPW>10.3</Scenario_Echo_LVPW>
+                <Scenario_Echo_LAD>39</Scenario_Echo_LAD>
+                <Scenario_CarotidUS/>
+                <Scenario_RenalArteryUS/>
+                <随访/>
+                <FollowUp_Death/>
+                <FollowUp_MI/>
+                <FollowUp_Revascularization/>
+                <FollowUp_HF/>
+                <FollowUp_Readmission/>
+                <FollowUp_FollowUpLabSheet/>
+                <FollowUp_CardiacEvent/>
+            </Table1>
+            <Table1 diffgr:id="Table15" msdata:rowOrder="4" diffgr:hasChanges="inserted">
+                <Patient_ID>49018</Patient_ID>
+                <Instance_ID>164942</Instance_ID>
+                <Patient_Name>刘秀玲</Patient_Name>
+                <Patient_Gender>女</Patient_Gender>
+                <Patient_Birthday>1928-11-23</Patient_Birthday>
+                <ExactAge>83</ExactAge>
+                <Patient_Tel>13681050199</Patient_Tel>
+                <Admission>2011-12-11 14:24</Admission>
+                <Discharge>2012-3-1 10:00</Discharge>
+                <Diagnosis>冠状动脉粥样硬化性心脏病;</Diagnosis>
+                <Complications_Diabetes>0</Complications_Diabetes>
+                <Complications_Hypertension>1</Complications_Hypertension>
+                <Complications_Hyperlipidemia>1</Complications_Hyperlipidemia>
+                <Complications_CI>1</Complications_CI>
+                <Complications_CRI>0</Complications_CRI>
+                <Complications_PAD>0</Complications_PAD>
+                <StrokeExperience>1</StrokeExperience>
+                <OMI>0</OMI>
+                <FamilyHistoryFlag>1</FamilyHistoryFlag>
+                <Scenario_Smooking>0</Scenario_Smooking>
+                <Scenario_Anthropometrics_BodyHeight>155</Scenario_Anthropometrics_BodyHeight>
+                <Scenario_Anthropometrics_BodyWeight>60</Scenario_Anthropometrics_BodyWeight>
+                <Scenario_Anthropometrics_BMI>25</Scenario_Anthropometrics_BMI>
+                <Scenario_PhysiologicalParameters_HR>78</Scenario_PhysiologicalParameters_HR>
+                <Scenario_PhysiologicalParameters_BpSys>156</Scenario_PhysiologicalParameters_BpSys>
+                <Scenario_PhysiologicalParameters_BpDia>73</Scenario_PhysiologicalParameters_BpDia>
+                <Medication_Aspirin>1</Medication_Aspirin>
+                <Medication_Clopidogrel>1</Medication_Clopidogrel>
+                <Medication_TirofibanHydrochloride>1</Medication_TirofibanHydrochloride>
+                <Medication_Statins>1</Medication_Statins>
+                <Medication_Prolol>1</Medication_Prolol>
+                <Medication_ACEIARB>0</Medication_ACEIARB>
+                <PCI_SurgeryDay>2011-12-14</PCI_SurgeryDay>
+                <PCI_Emergency_PCI>0</PCI_Emergency_PCI>
+                <PCI_CA_LAD_StenosisLevel>2</PCI_CA_LAD_StenosisLevel>
+                <PCI_CA_LAD_StenosisSegmentsRaw>2~3</PCI_CA_LAD_StenosisSegmentsRaw>
+                <PCI_CA_DIAG_StenosisLevel>3</PCI_CA_DIAG_StenosisLevel>
+                <PCI_CA_LCX_StenosisLevel>0</PCI_CA_LCX_StenosisLevel>
+                <PCI_CA_LCX_StenosisSegmentsRaw/>
+                <PCI_CA_OM_StenosisLevel>0</PCI_CA_OM_StenosisLevel>
+                <PCI_CA_RCA_StenosisLevel>0</PCI_CA_RCA_StenosisLevel>
+                <PCI_CA_RCA_StenosisSegmentsRaw/>
+                <PCI_CA_LM_StenosisLevel>0</PCI_CA_LM_StenosisLevel>
+                <PCI_CA_RenalArtery_StenosisLevel/>
+                <治疗/>
+                <PCI_CA_LAD_PCI>0</PCI_CA_LAD_PCI>
+                <PCI_CA_DIAG_PCI>0</PCI_CA_DIAG_PCI>
+                <PCI_CA_LCX_PCI>0</PCI_CA_LCX_PCI>
+                <PCI_CA_RCA_PCI>0</PCI_CA_RCA_PCI>
+                <PCI_CA_LM_PCI>0</PCI_CA_LM_PCI>
+                <检验指标/>
+                <Scenario_Test_TC>4.34</Scenario_Test_TC>
+                <Scenario_Test_TG>1.68</Scenario_Test_TG>
+                <Scenario_Test_LDL>2.8</Scenario_Test_LDL>
+                <Scenario_Test_HDL>0.78</Scenario_Test_HDL>
+                <Scenario_Test_APOA1>1.05</Scenario_Test_APOA1>
+                <Scenario_Test_APOB>1.01</Scenario_Test_APOB>
+                <Scenario_Test_a>27.58</Scenario_Test_a>
+                <Scenario_Test_CRE>104.3</Scenario_Test_CRE>
+                <Scenario_Test_BUN>6.43</Scenario_Test_BUN>
+                <Scenario_Test_FBG>5.45</Scenario_Test_FBG>
+                <Scenario_Test_CK>230.4</Scenario_Test_CK>
+                <Scenario_Test_CK-MB>14.88</Scenario_Test_CK-MB>
+                <Scenario_Test_TNT>0.697</Scenario_Test_TNT>
+                <Scenario_Test_HCY>13.85</Scenario_Test_HCY>
+                <Scenario_Test_CYC>1.73</Scenario_Test_CYC>
+                <Scenario_Test_UA>374.6</Scenario_Test_UA>
+                <Scenario_Test_BNP/>
+                <Scenario_Test_HGB>134</Scenario_Test_HGB>
+                <Scenario_Test_WBC>7.22</Scenario_Test_WBC>
+                <Scenario_Test_Neutrophil>0.643</Scenario_Test_Neutrophil>
+                <Scenario_Test_D-Dimer>1.03</Scenario_Test_D-Dimer>
+                <Scenario_Test_CRP>0.17</Scenario_Test_CRP>
+                <Scenario_Test_IL-6/>
+                <术后48H/>
+                <Scenario_Test_CRE_48h/>
+                <Scenario_Test_BUN_48h/>
+                <超声指标/>
+                <Scenario_Echo_EF>72</Scenario_Echo_EF>
+                <Scenario_Echo_LVDs/>
+                <Scenario_Echo_LVDd>37</Scenario_Echo_LVDd>
+                <Scenario_Echo_IVS>12</Scenario_Echo_IVS>
+                <Scenario_Echo_LVPW>11</Scenario_Echo_LVPW>
+                <Scenario_Echo_LAD>32</Scenario_Echo_LAD>
+                <Scenario_CarotidUS>颈动脉粥样硬化，右侧颈内动脉起始部狭窄</Scenario_CarotidUS>
+                <Scenario_RenalArteryUS>0</Scenario_RenalArteryUS>
+                <随访/>
+                <FollowUp_Death/>
+                <FollowUp_MI/>
+                <FollowUp_Revascularization/>
+                <FollowUp_HF/>
+                <FollowUp_Readmission/>
+                <FollowUp_FollowUpLabSheet/>
+                <FollowUp_CardiacEvent/>
+            </Table1>
+            <Table1 diffgr:id="Table16" msdata:rowOrder="5" diffgr:hasChanges="inserted">
+                <Patient_ID>513390</Patient_ID>
+                <Instance_ID>352852</Instance_ID>
+                <Patient_Name>赵福堂</Patient_Name>
+                <Patient_Gender>男</Patient_Gender>
+                <Patient_Birthday>1928-12-14</Patient_Birthday>
+                <ExactAge>81</ExactAge>
+                <Patient_Tel>13520093670</Patient_Tel>
+                <Admission>2011-6-23 15:08</Admission>
+                <Discharge>2011-7-4 15:00</Discharge>
+                <Diagnosis>冠状动脉粥样硬化性心脏病 稳定型心绞痛 陈旧性下壁、正后壁心悸梗死 球囊扩张术后</Diagnosis>
+                <Complications_Diabetes>0</Complications_Diabetes>
+                <Complications_Hypertension>1</Complications_Hypertension>
+                <Complications_Hyperlipidemia>1</Complications_Hyperlipidemia>
+                <Complications_CI>0</Complications_CI>
+                <Complications_CRI>1</Complications_CRI>
+                <Complications_PAD>1</Complications_PAD>
+                <StrokeExperience>0</StrokeExperience>
+                <OMI>1</OMI>
+                <FamilyHistoryFlag>0</FamilyHistoryFlag>
+                <Scenario_Smooking>0</Scenario_Smooking>
+                <Scenario_Anthropometrics_BodyHeight>168</Scenario_Anthropometrics_BodyHeight>
+                <Scenario_Anthropometrics_BodyWeight>72.5</Scenario_Anthropometrics_BodyWeight>
+                <Scenario_Anthropometrics_BMI>25.7</Scenario_Anthropometrics_BMI>
+                <Scenario_PhysiologicalParameters_HR>72</Scenario_PhysiologicalParameters_HR>
+                <Scenario_PhysiologicalParameters_BpSys>140</Scenario_PhysiologicalParameters_BpSys>
+                <Scenario_PhysiologicalParameters_BpDia>105</Scenario_PhysiologicalParameters_BpDia>
+                <Medication_Aspirin>1</Medication_Aspirin>
+                <Medication_Clopidogrel>1</Medication_Clopidogrel>
+                <Medication_TirofibanHydrochloride>0</Medication_TirofibanHydrochloride>
+                <Medication_Statins>1</Medication_Statins>
+                <Medication_Prolol>1</Medication_Prolol>
+                <Medication_ACEIARB>1</Medication_ACEIARB>
+                <PCI_SurgeryDay>2011-6-27</PCI_SurgeryDay>
+                <PCI_Emergency_PCI>0</PCI_Emergency_PCI>
+                <PCI_CA_LAD_StenosisLevel>0</PCI_CA_LAD_StenosisLevel>
+                <PCI_CA_LAD_StenosisSegmentsRaw/>
+                <PCI_CA_DIAG_StenosisLevel>0</PCI_CA_DIAG_StenosisLevel>
+                <PCI_CA_LCX_StenosisLevel>0</PCI_CA_LCX_StenosisLevel>
+                <PCI_CA_LCX_StenosisSegmentsRaw/>
+                <PCI_CA_OM_StenosisLevel>1</PCI_CA_OM_StenosisLevel>
+                <PCI_CA_RCA_StenosisLevel>0</PCI_CA_RCA_StenosisLevel>
+                <PCI_CA_RCA_StenosisSegmentsRaw/>
+                <PCI_CA_LM_StenosisLevel>0</PCI_CA_LM_StenosisLevel>
+                <PCI_CA_RenalArtery_StenosisLevel/>
+                <治疗/>
+                <PCI_CA_LAD_PCI>0</PCI_CA_LAD_PCI>
+                <PCI_CA_DIAG_PCI>0</PCI_CA_DIAG_PCI>
+                <PCI_CA_LCX_PCI>0</PCI_CA_LCX_PCI>
+                <PCI_CA_RCA_PCI>0</PCI_CA_RCA_PCI>
+                <PCI_CA_LM_PCI>0</PCI_CA_LM_PCI>
+                <检验指标/>
+                <Scenario_Test_TC>3.51</Scenario_Test_TC>
+                <Scenario_Test_TG>1.62</Scenario_Test_TG>
+                <Scenario_Test_LDL>1.95</Scenario_Test_LDL>
+                <Scenario_Test_HDL>1.01</Scenario_Test_HDL>
+                <Scenario_Test_APOA1/>
+                <Scenario_Test_APOB/>
+                <Scenario_Test_a/>
+                <Scenario_Test_CRE>107.3</Scenario_Test_CRE>
+                <Scenario_Test_BUN>5.05</Scenario_Test_BUN>
+                <Scenario_Test_FBG>4.94</Scenario_Test_FBG>
+                <Scenario_Test_CK>395</Scenario_Test_CK>
+                <Scenario_Test_CK-MB>4.71</Scenario_Test_CK-MB>
+                <Scenario_Test_TNT>0.014</Scenario_Test_TNT>
+                <Scenario_Test_HCY/>
+                <Scenario_Test_CYC/>
+                <Scenario_Test_UA>165.3</Scenario_Test_UA>
+                <Scenario_Test_BNP/>
+                <Scenario_Test_HGB>135</Scenario_Test_HGB>
+                <Scenario_Test_WBC>6</Scenario_Test_WBC>
+                <Scenario_Test_Neutrophil>0.615</Scenario_Test_Neutrophil>
+                <Scenario_Test_D-Dimer/>
+                <Scenario_Test_CRP>&lt;0.308</Scenario_Test_CRP>
+                <Scenario_Test_IL-6/>
+                <术后48H/>
+                <Scenario_Test_CRE_48h/>
+                <Scenario_Test_BUN_48h/>
+                <超声指标/>
+                <Scenario_Echo_EF>57</Scenario_Echo_EF>
+                <Scenario_Echo_LVDs>35</Scenario_Echo_LVDs>
+                <Scenario_Echo_LVDd>50</Scenario_Echo_LVDd>
+                <Scenario_Echo_IVS>11</Scenario_Echo_IVS>
+                <Scenario_Echo_LVPW>11</Scenario_Echo_LVPW>
+                <Scenario_Echo_LAD>41</Scenario_Echo_LAD>
+                <Scenario_CarotidUS/>
+                <Scenario_RenalArteryUS/>
+                <随访/>
+                <FollowUp_Death/>
+                <FollowUp_MI/>
+                <FollowUp_Revascularization/>
+                <FollowUp_HF/>
+                <FollowUp_Readmission/>
+                <FollowUp_FollowUpLabSheet/>
+                <FollowUp_CardiacEvent/>
+            </Table1>
+        </NewDataSet>
+    </diffgr:diffgram>
+</DataTable>

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<FengQiLu.Models.CVD>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    
+    @using (Html.BeginForm("Search","Home",FormMethod.Get)) 
+    {
+        <p>Search (by name, ID, or diagnosis): @Html.TextBox("keyword")
+        <input type="submit" value="Filter" /></p>
+    }
+</p>
+<div>病例总数 @ViewBag.TotalCase</div>
+<table>
+    <tr>
+        <th>
+            住院号
+        </th>
+        <th>
+            姓名
+        </th>
+        <th>
+            性别
+        </th>
+        <th>
+            诊断
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Instance_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diagnosis)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |            
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<br/>
+&nbsp;&nbsp;
+@if (ViewBag.Page > 1)
+{
+    <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })"><span>&lt;Previous Page</span> </a>
+    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+}
+@if (ViewBag.Page < ViewBag.TotalPage)
+{
+    <a href="@Url.Action("Index", new { page = ViewBag.Page + 1 })"><span>Next Page&gt;</span> </a>
+}
